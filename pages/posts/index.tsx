@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPropsContext } from 'next'
+import Link from 'next/link'
 import { title } from 'process'
 import * as React from 'react'
 
@@ -7,13 +8,16 @@ export interface PostPageProps {
 }
 
 export default function PostPage({ posts }: PostPageProps) {
-  console.log(posts)
   return (
     <div>
-      <h1 id="postDetailTitle">fdggdf</h1>
+      <h1 id="postDetailTitle">Post Page</h1>
       <ul>
         {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
+          <li key={post.id}>
+            <Link href={`/posts/${post.id}`}>
+              <a>{post.title}</a>
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
