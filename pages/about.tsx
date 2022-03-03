@@ -1,5 +1,6 @@
 // import Header from '@/components/common/header'
 import { AdminLayout, MainLayout } from '@/components/layout'
+import { Box, Typography } from '@mui/material'
 import dynamic from 'next/dynamic'
 import * as React from 'react'
 
@@ -18,14 +19,16 @@ export default function AboutPage(props: AboutPageProps) {
     })()
   }, [])
   return (
-    <>
-      <Header />
+    <Box>
+      <Typography component="h1" variant="h3" color="primary.main">
+        About Page
+      </Typography>
       <ul>
         {postList.map((post: any) => (
           <li key={post.id}>{post.title}</li>
         ))}
       </ul>
-    </>
+    </Box>
   )
 }
 
