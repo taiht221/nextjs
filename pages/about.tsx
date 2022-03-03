@@ -1,5 +1,5 @@
 // import Header from '@/components/common/header'
-import { MainLayout } from '@/components/layout'
+import { AdminLayout, MainLayout } from '@/components/layout'
 import dynamic from 'next/dynamic'
 import * as React from 'react'
 
@@ -29,4 +29,4 @@ export default function AboutPage(props: AboutPageProps) {
   )
 }
 
-AboutPage.Layout = MainLayout
+AboutPage.Layout = AdminLayout
