@@ -38,7 +38,7 @@ export function useAuth(option?: Partial<PublicConfiguration>) {
   }
 
   return {
-    profile,
+    profile: profile as any,
     error,
     login,
     logout,
