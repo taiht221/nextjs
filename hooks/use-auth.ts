@@ -21,11 +21,12 @@ export function useAuth(option?: Partial<PublicConfiguration>) {
     ...option,
   })
 
+  console.log(profile)
   const firstLoading = profile === undefined && error === undefined
 
   async function login() {
     await authApi.login({
-      username: 'alisa',
+      username: 'test1234',
       password: '123456',
     })
 

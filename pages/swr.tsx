@@ -1,10 +1,10 @@
 import { StudentDetail } from '@/components/swr'
-import { useState } from 'react'
+import * as React from 'react'
 
 export interface SWRPageProps {}
 
 export default function SWRPage(props: SWRPageProps) {
-  const [detailList, setDetailList] = useState([1, 1, 1])
+  const [detailList, setDetailList] = React.useState([1, 1, 1])
 
   function handelAddClick() {
     setDetailList((prevList) => [...prevList, 1])
