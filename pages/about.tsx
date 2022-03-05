@@ -4,8 +4,6 @@ import { Box, Typography } from '@mui/material'
 import dynamic from 'next/dynamic'
 import * as React from 'react'
 
-const Header = dynamic(() => import('@/components/common/header'), { ssr: false })
-
 export interface AboutPageProps {}
 
 export default function AboutPage(props: AboutPageProps) {
