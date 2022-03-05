@@ -1,7 +1,6 @@
 // import Header from '@/components/common/header'
 import { AdminLayout, MainLayout } from '@/components/layout'
 import { Box, Typography } from '@mui/material'
-import dynamic from 'next/dynamic'
 import * as React from 'react'
 
 export interface AboutPageProps {}
