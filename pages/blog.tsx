@@ -7,4 +7,4 @@ export default function BlogPage(props: BlogPageProps) {
   return <div>BlogPage</div>
 }
 
-BlogPage.layout = MainLayout
+BlogPage.Layout = MainLayout
