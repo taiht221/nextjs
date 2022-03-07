@@ -20,7 +20,7 @@ import { ROUTE_LIST } from './router'
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right'
 
-export function HeaderMobile(anchor: Anchor) {
+export function HeaderMobile() {
   const router = useRouter()
   const [state, setState] = React.useState({
     top: false,
@@ -81,7 +81,7 @@ export function HeaderMobile(anchor: Anchor) {
         </IconButton>
       </Stack>
       <Drawer anchor={'right'} open={state['right']} onClose={toggleDrawer('right', false)}>
-        {list(anchor)}
+        {list('right')}
       </Drawer>
     </>
   )

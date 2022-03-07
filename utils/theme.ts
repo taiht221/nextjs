@@ -1,6 +1,5 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
-import { breakpoints } from '@mui/system'
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 
 // Create a theme instance.
 export let theme = createTheme({
