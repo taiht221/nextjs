@@ -2,8 +2,9 @@ import { authApi } from '@/api/index'
 import useSWR from 'swr'
 import * as React from 'react'
 import { PublicConfiguration } from 'swr/dist/types'
+import { UseAuthProps } from '../models'
 
-export function useAuth(option?: Partial<PublicConfiguration>) {
+export function useAuth(option?: Partial<PublicConfiguration>): UseAuthProps {
   const {
     data: profile,
     error,
@@ -21,7 +22,6 @@ export function useAuth(option?: Partial<PublicConfiguration>) {
     ...option,
   })
 
-  console.log(profile)
   const firstLoading = profile === undefined && error === undefined
 
   async function login() {
@@ -32,14 +32,12 @@ export function useAuth(option?: Partial<PublicConfiguration>) {
 
     await mutate()
   }
-
   async function logout() {
     await authApi.logout()
     mutate({}, false)
   }
-
   return {
-    profile: profile as any,
+    profile,
     error,
     login,
     logout,
